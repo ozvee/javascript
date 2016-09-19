@@ -1,0 +1,131 @@
+<form id="MML_InputForm" class="input-form" action="">
+    <section id="MML_InputForm_Heading" class="heading">
+        <div class="statement">
+            <h3 class="header">
+                <span class="text">Matrix:</span>
+            </h3>
+            <div class="expression">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="numeric" name="a00" type="text" value="3.8"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>11</sub> + </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="a01" type="text" value="-2.5"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>12</sub> + </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="a02" type="text" value="3.7"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>13</sub> = </label>
+                            </td>
+                            <td>
+                                <input name="b0" type="text" value="6.5"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="numeric" name="a10" type="text" value="0.5"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>21</sub> + </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="a11" type="text" value="0.84"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>22</sub> + </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="a12" type="text" value="1.7"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>23</sub> = </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="b1" type="text" value="0"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="numeric" name="a20" type="text" value="1.6"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>31</sub> + </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="a21" type="text" value="2.3"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>32</sub> + </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="a22" type="text" value="-4.5"/>
+                                <label class="as-var"><span class="special-symbol multiply">&middot</span>X<sub>33</sub> = </label>
+                            </td>
+                            <td>
+                                <input class="numeric" name="b2" type="text" value="4.3"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section> 
+    <section id="MML_InputForm_UserInput" class="user-input">
+        <h3 class="header">
+            <span class="text">Parameters:</span>
+        </h3>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Select method:</label>
+            </dt>
+            <dd class="input-wrap">
+                <select id="MML_InputForm_UserInput_methodSelect0" name="method_num">
+                    <option value="0">Jordan-Gaussian</option>
+                    <option value="1">Basic iterations</option>
+                </select>
+            </dd>
+        </dl>
+        <dl id="MML_InputForm_UserInput_simpleItersPrecisionBlock" class="argument hidden">
+            <dt>
+            <label>Precision:</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text"  value="3" name="precision">
+            </dd>
+        </dl>
+        <button id="MML_InputForm_UserInput_RefreshBtn" class="play-btn" name="PlayBtn" disabled="disabled">
+            <span class="text">&#9658;</span>
+        </button>
+    </section>
+</form>
+<script id="MML_InputForm_HelpingScript" type="text/javascript">
+    MML.res.InputForm.HelpingScript = {
+        //Constants to be used
+        constants: {
+            ids: {
+                target: 'MML_InputForm_UserInput_methodSelect0',
+                presisionBlock: 'MML_InputForm_UserInput_simpleItersPrecisionBlock'
+            },
+            errors: {
+                selectOverValue: 'MML_InputForm4_Interactive: unexpected value of selection'
+            }
+        },
+        call: function () {
+            //Global variables
+            var currentModule = this,
+                    target = document.getElementById(currentModule.constants.ids.target),
+                    precisionBlockStyle = document.getElementById(currentModule.constants.ids.presisionBlock).style;
+
+            target.onchange = function ()
+            {
+                var num = parseInt(this.value);
+                //Showing additional field: simpleIters precision if appropriate method selected
+                switch (num)
+                {
+                    case 0:
+                        precisionBlockStyle.display = 'none';
+                        break;
+                    case 1:
+                        precisionBlockStyle.display = 'block';
+                        break;
+                    default:
+                        console.log(currentModule.constants.errors.selectOverValue + ': ' + this.value);
+                }
+            };
+        }
+    };
+    MML.res.InputForm.HelpingScript.call();
+</script>

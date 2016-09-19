@@ -1,0 +1,132 @@
+<form id="MML_InputForm" class="input-form" action="">
+    <section id="MML_InputForm_Heading" class="heading">
+        <h3 class="header">
+            <span class="text">Лабораторна робота №6</span>
+        </h3>
+        <div class="statement">
+            <h3 class="header">
+                <span class="text">Завдання:</span>
+            </h3>
+            <div class="expression">
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">Відрізок</span>
+                                </mark>
+                            </td>
+                            <td></td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">Значення функції</span>
+                                </mark>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">b</span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="b" value="6.8">
+                            </td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">y<sub>0</sub></span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="y0" value="-3.7">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">a</span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="a" value="1.6">
+                            </td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">y<sub>1</sub></span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="y1" value="-0.2">
+                            </td>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">y<sub>2</sub></span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="y2" value="1.5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">y<sub>3</sub></span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="y3" value="4.3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <mark class="for-default-styling">
+                                    <span class="text">y<sub>4</sub></span>
+                                </mark>
+                            </td>
+                            <td>
+                                <input class="numeric" type="text" name="y4" value="2.2">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section> 
+    <section id="MML_InputForm_UserInput" class="user-input">
+        <h3 class="header">
+            <span class="text">Параметри розрахунку:</span>
+        </h3>
+        <dl class="argument">
+            <dt>
+            <label>Задана похибка <em>e</em>:</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text"  value="3" name="e_accur">
+            </dd>
+        </dl>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Оберіть метод</label>
+            </dt>
+            <dd class="input-wrap">
+                <select name="method_num">
+                    <option value="1">Перша інтерполяційна формула Ньютона</option>
+                    <option value="2">Друга інтерполяційна формула Ньютона</option>
+                </select>
+            </dd>
+        </dl>
+        <button id="MML_InputForm_UserInput_RefreshBtn" class="play-btn" name="PlayBtn" disabled="disabled">
+            <span class="text">&#9658;</span>
+        </button>
+    </section>
+</form>

@@ -1,0 +1,53 @@
+<form id="MML_InputForm" class="input-form" action=""> 
+    <section id="MML_InputForm_Heading" class="heading">
+        <h3 class="header">
+            <span class="text">Лабораторна робота №3</span>
+        </h3>
+        <div class="statement">
+            <h3 class="header">
+                <span class="text">Завдання:</span>
+            </h3>
+            <div class="expression">
+                <mark class="for-default-styling">
+                    <span class="text">f(x) = 2e<sup>-x<sup>2</sup></sup>-3x+4</span>
+                </mark>
+            </div>
+        </div>
+    </section> 
+    <section id="MML_InputForm_UserInput" class="user-input">
+        <h3 class="header">
+            <span class="text">Параметри розрахунку:</span>
+        </h3>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Радіус пошуку</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text" value="200" name="scope">
+            </dd>
+        </dl>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Вииберіть метод</label>
+            </dt>
+            <dd class="input-wrap">
+                <select name="method_num">
+                    <option value="1">Апроксимуючий</option>
+                    <option value="2">Комбінований</option>
+                    <option value="3">Метод простих ітерацій</option>
+                </select>
+            </dd>
+        </dl>
+        <dl id="MML_InputForm_UserInput_si_precision_block" class="argument">
+            <dt>
+            <label class="hypothetic">Точність обчислень</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text" value="1" name="precision">
+            </dd>
+        </dl>
+        <button id="MML_InputForm_UserInput_RefreshBtn" class="play-btn" name="PlayBtn" disabled="disabled">
+            <span class="text special-symbol play">&#9658;</span>
+        </button>
+    </section>
+</form>

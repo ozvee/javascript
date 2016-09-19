@@ -1,0 +1,57 @@
+<form id="MML_InputForm" class="input-form" action="">
+    <section id="MML_InputForm_Heading" class="heading">
+        <h3 class="header">
+            <span class="text">Лабораторна робота №5</span>
+        </h3>
+        <div class="statement">
+            <h3 class="header">
+                <span class="text">Завдання:</span>
+            </h3>
+            <div class="expression">
+                <table>
+                    <tr>
+                        <td>
+                            <mark class="for-default-styling">
+                                <span class="text">e<sup>y</sup>-e<sup>x</sup> + 1 = 0</span>
+                            </mark>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mark class="for-default-styling">
+                                <span class="text">x<span class="special-symbol multiply">&middot</span>y + 1 = 0</span>
+                            </mark>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section> 
+    <section id="MML_InputForm_UserInput" class="user-input">
+        <h3 class="header">
+            <span class="text">Параметри розрахунку:</span>
+        </h3>
+        <dl class="argument">
+            <dt>
+            <label>Задана похибка <em>e</em>:</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text" name="e_accur" value="3">
+            </dd>
+        </dl>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Виберіть метод</label>
+            </dt>
+            <dd class="input-wrap">
+                <select name="method_num">
+                    <option value="1">Метод Зейделя</option>
+                    <option value="2">Метод Ньютона</option>
+                </select>
+            </dd>
+        </dl>
+        <button id="MML_InputForm_UserInput_RefreshBtn" class="play-btn" name="PlayBtn" disabled="disabled">
+            <span class="text">&#9658;</span>
+        </button>
+    </section>
+</form>
